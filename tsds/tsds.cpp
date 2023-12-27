@@ -53,29 +53,29 @@ struct TsdsDatabaseConfig
 struct TsdsSeriesConfig
 {
 	TSDS_INDEX_FORMAT	indexFormat			{ TSDS_INDEX_FORMAT_UNSIGNED_INTEGER_64 };
-	TsdsIndex			indexBegin			{   0ULL  };
-	TsdsIndex			indexStep			{   0ULL  };
-	TsdsSize			elementsCount		{   0ULL  };
-	TsdsSize			chankSize			{   0ULL  };
-	TsdsSize			elementSize			{   0ULL  };
+	TsdsIndex		indexBegin			{   0ULL  };
+	TsdsIndex		indexStep			{   0ULL  };
+	TsdsSize		elementsCount			{   0ULL  };
+	TsdsSize		chankSize			{   0ULL  };
+	TsdsSize		elementSize			{   0ULL  };
 };
 
 typedef struct TsdsPhysicalStore
 {
-	std::wstring		folderPath			{         };
+	std::wstring			folderPath	{	};
 
-	std::vector<TsdsDatabase*> databaseList	{		  };
+	std::vector<TsdsDatabase*> 	databaseList	{	};
 } TsdsPhysicalStore;
 
 typedef struct TsdsDatabase
 {
-	TsdsPhysicalStore*	pPhysicalStore		{ nullptr };
-	TsdsDatabaseConfig	databaseConfig		{         };
+	TsdsPhysicalStore*		pPhysicalStore		{ nullptr };
+	TsdsDatabaseConfig		databaseConfig		{         };
 
-	std::wstring		databaseName		{         };
-	std::wstring		fullPath			{         };
+	std::wstring			databaseName		{         };
+	std::wstring			fullPath		{         };
 
-	std::vector<TsdsSeries*> seriesList		{		  };
+	std::vector<TsdsSeries*> 	seriesList		{	  };
 } TsdsDatabase;
 
 typedef struct TsdsSeries
@@ -86,7 +86,7 @@ typedef struct TsdsSeries
 
 	std::wstring		seriesName			{         };
 	std::wstring		fullPath			{         };
-	std::wstring		configFileName		{         };
+	std::wstring		configFileName			{         };
 
 } TsdsSeries;
 
